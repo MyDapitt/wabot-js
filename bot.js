@@ -47,7 +47,7 @@ const client = new Client({
         authStrategy: new LocalAuth(),
         executablePath: platform() === 'win32' ? 'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe' : '/usr/bin/google-chrome-stable'
     },
-    userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36'
+    userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 Edg/120.0.2210.133'
 });
 
 client.on('loading_screen', (percent, message) => {
@@ -103,14 +103,14 @@ client.on("message", async (message) => {
           
       async function ctwa(title, description, thumbnail, mediaUrl) {
         if (!title && !description && !thumbnail && !mediaUrl) {
-            const thumb = await MessageMedia.fromUrl('https://telegra.ph/file/3a34bfa58714bdef500d9.jpg');
+            const thumb = await MessageMedia.fromUrl('https://missuo.ru/file/f05431ce63c792ae1ff48.jpg');
             return ({
                 "ctwaContext": {
                     title: 'Simple WhatsApp Bot',
-                    description: `Library Version : ${require('whatsapp-web.js/package.json').version}`,
+                    description: `Usinh whatsapp-web.js`,
                     thumbnail: thumb.data,
                     mediaType: 2,
-                    mediaUrl: 'https://www.facebook.com/tio.permana.50999'
+                    mediaUrl: 'https://wa.me/message'
                 }
             });
         }
@@ -149,14 +149,14 @@ client.on("message", async (message) => {
             
             async function ctwa(title, description, thumbnail, mediaUrl) {
         if (!title && !description && !thumbnail && !mediaUrl) {
-            const thumb = await MessageMedia.fromUrl('https://telegra.ph/file/3a34bfa58714bdef500d9.jpg');
+            const thumb = await MessageMedia.fromUrl('https://telegra.ph/file/f05431ce63c792ae1ff48.jpg');
             return ({
                 "ctwaContext": {
                     title: 'Simple WhatsApp Bot',
-                    description: `Library Version : ${require('whatsapp-web.js/package.json').version}`,
+                    description: `With whatsapp-web.js`,
                     thumbnail: thumb.data,
                     mediaType: 2,
-                    mediaUrl: 'https://www.facebook.com/tio.permana.50999'
+                    mediaUrl: 'https://wa.me/message'
                 }
             });
         }
@@ -192,14 +192,14 @@ client.on("message", async (message) => {
       
       async function ctwa(title, description, thumbnail, mediaUrl) {
         if (!title && !description && !thumbnail && !mediaUrl) {
-            const thumb = await MessageMedia.fromUrl('https://telegra.ph/file/3a34bfa58714bdef500d9.jpg');
+            const thumb = await MessageMedia.fromUrl('https://telegra.ph/file/f05431ce63c792ae1ff48.jpg');
             return ({
                 "ctwaContext": {
                     title: 'Simple WhatsApp Bot',
-                    description: `Library Version : ${require('whatsapp-web.js/package.json').version}`,
+                    description: `With whatsapp-web.js`,
                     thumbnail: thumb.data,
                     mediaType: 2,
-                    mediaUrl: 'https://www.facebook.com/tio.permana.50999'
+                    mediaUrl: 'https://wa.me/message'
                 }
             });
         }
@@ -234,14 +234,14 @@ client.on("message", async (message) => {
       
       async function ctwa(title, description, thumbnail, mediaUrl) {
         if (!title && !description && !thumbnail && !mediaUrl) {
-            const thumb = await MessageMedia.fromUrl('https://telegra.ph/file/3a34bfa58714bdef500d9.jpg');
+            const thumb = await MessageMedia.fromUrl('https://telegra.ph/file/f05431ce63c792ae1ff48.jpg');
             return ({
                 "ctwaContext": {
                     title: 'Simple WhatsApp Bot',
-                    description: `Library Version : ${require('whatsapp-web.js/package.json').version}`,
+                    description: `With whatsapp-web.js`,
                     thumbnail: thumb.data,
                     mediaType: 2,
-                    mediaUrl: 'https://www.facebook.com/tio.permana.50999'
+                    mediaUrl: 'https://wa.me/message'
                 }
             });
         }
@@ -307,14 +307,14 @@ client.on("message", async (message) => {
         
       async function ctwa(title, description, thumbnail, mediaUrl) {
         if (!title && !description && !thumbnail && !mediaUrl) {
-            const thumb = await MessageMedia.fromUrl('https://telegra.ph/file/3a34bfa58714bdef500d9.jpg');
+            const thumb = await MessageMedia.fromUrl('https://telegra.ph/file/f05431ce63c792ae1ff48.jpg');
             return ({
                 "ctwaContext": {
                     title: 'Simple WhatsApp Bot',
-                    description: `Library Version : ${require('whatsapp-web.js/package.json').version}`,
+                    description: `With whatsapp-web.js`,
                     thumbnail: thumb.data,
                     mediaType: 2,
-                    mediaUrl: 'https://www.facebook.com/tio.permana.50999'
+                    mediaUrl: 'https://wa.me/message'
                 }
             });
         }
@@ -350,14 +350,14 @@ client.on("message", async (message) => {
       
       async function ctwa(title, description, thumbnail, mediaUrl) {
         if (!title && !description && !thumbnail && !mediaUrl) {
-            const thumb = await MessageMedia.fromUrl('https://telegra.ph/file/3a34bfa58714bdef500d9.jpg');
+            const thumb = await MessageMedia.fromUrl('https://telegra.ph/file/f05431ce63c792ae1ff48.jpg');
             return ({
                 "ctwaContext": {
                     title: 'Simple WhatsApp Bot',
-                    description: `Library Version : ${require('whatsapp-web.js/package.json').version}`,
+                    description: `With whatsapp-web.js`,
                     thumbnail: thumb.data,
                     mediaType: 2,
-                    mediaUrl: 'https://www.facebook.com/tio.permana.50999'
+                    mediaUrl: 'https://wa.me/message'
                 }
             });
         }
@@ -392,14 +392,14 @@ client.on("message", async (message) => {
       
       async function ctwa(title, description, thumbnail, mediaUrl) {
         if (!title && !description && !thumbnail && !mediaUrl) {
-            const thumb = await MessageMedia.fromUrl('https://telegra.ph/file/3a34bfa58714bdef500d9.jpg');
+            const thumb = await MessageMedia.fromUrl('https://telegra.ph/file/f05431ce63c792ae1ff48.jpg');
             return ({
                 "ctwaContext": {
                     title: 'Simple WhatsApp Bot',
-                    description: `Library Version : ${require('whatsapp-web.js/package.json').version}`,
+                    description: `With whatsapp-web.js`,
                     thumbnail: thumb.data,
                     mediaType: 2,
-                    mediaUrl: 'https://www.facebook.com/tio.permana.50999'
+                    mediaUrl: 'https://wa.me/message'
                 }
             });
         }
@@ -660,14 +660,14 @@ Preview: ${cloud}`)
 └ `;
     async function ctwa(title, description, thumbnail, mediaUrl) {
         if (!title && !description && !thumbnail && !mediaUrl) {
-            const thumb = await MessageMedia.fromUrl('https://telegra.ph/file/3a34bfa58714bdef500d9.jpg');
+            const thumb = await MessageMedia.fromUrl('https://telegra.ph/file/f05431ce63c792ae1ff48.jpg');
             return ({
                 "ctwaContext": {
                     title: 'Simple WhatsApp Bot',
-                    description: `Library Version : ${require('whatsapp-web.js/package.json').version}`,
+                    description: `With whatsapp-web.js`,
                     thumbnail: thumb.data,
                     mediaType: 2,
-                    mediaUrl: 'https://www.facebook.com/tio.permana.50999'
+                    mediaUrl: 'https://wa.me/message'
                 }
             });
         }
