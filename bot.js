@@ -285,7 +285,7 @@ client.on("message", async (message) => {
       if (quotedMsg && quotedMsg.hasMedia) {
         message.react(react_loading);
         const media = await quotedMsg.downloadMedia();
-        client.sendMessage(message.from, media, { sendMediaAsSticker: true, stickerAuthor: "BOTCAHX", stickerName: "Bot", stickerCategories: ["🗿", "😆"]});
+        client.sendMessage(message.from, media, { sendMediaAsSticker: true, stickerAuthor: "E1", stickerName: "2024", stickerCategories: ["🗿", "😆"]});
         message.react(react_done);
       }
     } catch (e) {

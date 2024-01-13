@@ -1,2 +1,3 @@
-2024/01/13-02:14:27.027 2586 Creating DB /root/wabot/sessions/session-whatsapp-web/Default/File System/Origins since it was missing.
-2024/01/13-02:14:27.032 2586 Reusing MANIFEST /root/wabot/sessions/session-whatsapp-web/Default/File System/Origins/MANIFEST-000001
+2024/01/13-02:32:37.365 2777 Reusing MANIFEST /root/wabot/sessions/session-whatsapp-web/Default/File System/Origins/MANIFEST-000001
+2024/01/13-02:32:37.366 2777 Recovering log #3
+2024/01/13-02:32:37.366 2777 Reusing old log /root/wabot/sessions/session-whatsapp-web/Default/File System/Origins/000003.log 
