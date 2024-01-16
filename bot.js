@@ -623,8 +623,8 @@ Preview: ${cloud}`)
   try {
   const link = text.replace(".ss", "");
   if (!link) return message.reply('Enter link!')
-  const 99 = await fetch(BASE_URL + `/sspc` + `?url=${encodeURIComponent(link)}`).then(response => response.buffer());
-  const response = new MessageMedia((await fromBuffer(99)).mime, 99.toString("base64"))
+  const 99o = await fetch(BASE_URL + `/sspc` + `?url=${encodeURIComponent(link)}`).then(response => response.buffer());
+  const response = new MessageMedia((await fromBuffer(99o)).mime, 99o.toString("base64"))
   await client.sendMessage(message.from, response, { caption: `*Screenshot from:*\n${link}`, quotedMessage: message.id._serialized });     
     } catch (e) {
       console.log(e);
