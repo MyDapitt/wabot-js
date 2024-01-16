@@ -621,16 +621,23 @@ Preview: ${cloud}`)
   } 
   else if (text.includes(".ss")) {
   try {
-  const link = text.replace(".ss", "");
-  if (!link) return message.reply('Enter link!')
-  const 99o = await fetch(BASE_URL + `/sspc` + `?url=${encodeURIComponent(link)}`).then(response => response.buffer());
-  const response = new MessageMedia((await fromBuffer(99o)).mime, 99o.toString("base64"))
-  await client.sendMessage(message.from, response, { caption: `*Screenshot from:*\n${link}`, quotedMessage: message.id._serialized });     
-    } catch (e) {
-      console.log(e);
-      message.reply(`Error!\n${e}`)
-    } 
-    }
+    const link = text.replace(".ss", "").trim(); // Trim whitespace from the link
+    if (!link) return message.reply('Enter link!');
+
+    const screenshotBuffer = await fetch(BASE_URL + `/sspc?url=${encodeURIComponent(link)}`).then(response => response.buffer());
+    
+    const responseMedia = new MessageMedia((await fromBuffer(screenshotBuffer)).mime, screenshotBuffer.toString("base64"));
+
+    // Menggunakan quotedMessageObj.id untuk mendapatkan ID pesan yang dikutip
+    const quotedMessageObj = await message.getQuotedMessage();
+    if (!quotedMessageObj) return message.reply('Quoted message not found.');
+
+    await client.sendMessage(message.from, responseMedia, { caption: `*Screenshot from:*\n${link}`, quotedMessageId: quotedMessageObj.id });
+  } catch (e) {
+    console.error(e);
+    message.reply(`Error!\n${e}`);
+  }
+}
   else if (text.includes(".groups")) {
     try {
         client.getChats().then(chats => {
