@@ -89,7 +89,7 @@ client.initialize();
 // message responses
 client.on("message", async (message) => {
   console.log(chalk.bgYellow.black(`${message.fromMe ? 'Me' : message.from}`));
-  console.log(chalk.bgYellow.black(`> ${message.body}`));
+  console.log(chalk.cyan(`> ${message.body}`));
 
   const text = message.body.toLowerCase();
   // List fitur bot 
@@ -107,7 +107,7 @@ client.on("message", async (message) => {
             return ({
                 "ctwaContext": {
                     title: 'Simple WhatsApp Bot',
-                    description: `Usinh whatsapp-web.js`,
+                    description: `Using whatsapp-web.js`,
                     thumbnail: thumb.data,
                     mediaType: 2,
                     mediaUrl: 'https://wa.me/message'
@@ -278,19 +278,25 @@ client.on("message", async (message) => {
     } catch (e) {
         console.log(e);
     }
-    } else if (text.includes(".sticker")) {
+    } else if (text.includes(".sticker", ".s", ".stiker")) {
     try {
       const quotedMsg = await message.getQuotedMessage();
       if (!quotedMsg) await client.sendMessage(message.from, `Reply image messages with caption .sticker!`)                 
       if (quotedMsg && quotedMsg.hasMedia) {
         message.react(react_loading);
         const media = await quotedMsg.downloadMedia();
-        client.sendMessage(message.from, media, { sendMediaAsSticker: true, stickerAuthor: "E1", stickerName: "2024", stickerCategories: ["🗿", "😆"]});
+        client.sendMessage(message.from, media, { sendMediaAsSticker: true, stickerAuthor: "E1", stickerName: "(c) 2024", stickerCategories: ["😁", "😆"]});
         message.react(react_done);
       }
     } catch (e) {
       console.log(e);
     }   
+     }
+    else if (text.includes("bot")) {
+        await message.react('☺️');
+        const kata2 = ['Hi!', 'Hey, yo', 'Active :)', 'Ada apa sayang..', 'Iya sayang, aku ada disini..'];
+        const katanya = kata2[Math.floor(Math.random() * kata2.length)];
+        await message.reply(katanya);
      } else if (text.includes(".bardimg")) {
     try {
       const inputText = text.replace(".bardimg", "");
@@ -612,7 +618,20 @@ Preview: ${cloud}`)
     } catch (e) {
       console.log(e);
     } 
-  } else if (text.includes(".groups")) {
+  } 
+  else if (text.includes(".ss")) {
+  try {
+  const link = text.replace(".ss", "");
+  if (!link) return message.reply('Enter link!')
+  const 99 = await fetch(BASE_URL + `/sspc` + `?url=${encodeURIComponent(link)}`).then(response => response.buffer());
+  const response = new MessageMedia((await fromBuffer(99)).mime, 99.toString("base64"))
+  await client.sendMessage(message.from, response, { caption: `*Screenshot from:*\n${link}`, quotedMessage: message.id._serialized });     
+    } catch (e) {
+      console.log(e);
+      message.reply(`Error!\n${e}`)
+    } 
+    }
+  else if (text.includes(".groups")) {
     try {
         client.getChats().then(chats => {
             const groups = chats.filter(chat => chat.isGroup);
