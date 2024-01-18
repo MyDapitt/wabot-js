@@ -1,3 +1,9 @@
-2024/01/13-02:32:37.003 2770 Reusing MANIFEST /root/wabot/sessions/session-whatsapp-web/Default/Local Storage/leveldb/MANIFEST-000001
-2024/01/13-02:32:37.004 2770 Recovering log #3
-2024/01/13-02:32:37.004 2770 Reusing old log /root/wabot/sessions/session-whatsapp-web/Default/Local Storage/leveldb/000003.log 
+2024/01/18-10:11:14.973 c2 Reusing MANIFEST /home/container/app/sessions/session-whatsapp-web/Default/Local Storage/leveldb/MANIFEST-000001
+2024/01/18-10:11:14.973 c2 Recovering log #3
+2024/01/18-10:11:14.973 c2 Reusing old log /home/container/app/sessions/session-whatsapp-web/Default/Local Storage/leveldb/000003.log 
+2024/01/18-11:14:16.002 180 Level-0 table #5: started
+2024/01/18-11:14:16.004 180 Level-0 table #5: 14403 bytes OK
+2024/01/18-11:14:16.005 180 Delete type=0 #3
+2024/01/18-12:37:16.003 180 Level-0 table #7: started
+2024/01/18-12:37:16.005 180 Level-0 table #7: 11781 bytes OK
+2024/01/18-12:37:16.006 180 Delete type=0 #4
